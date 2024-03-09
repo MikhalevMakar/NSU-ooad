@@ -1,0 +1,55 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.4'
+    id 'io.spring.dependency-management' version '1.1.3'
+    id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '8.0.0'
+}
+
+group = 'ru.nsu.ooad.communicationboost'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = '17'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'email-starter'
+            from components.java
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    /* web */
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    /* lombok */
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    /* validation */
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    /* mail  */
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+    /* marker annotation */
+    implementation 'org.jetbrains:annotations:23.0.0'
+
+    /* environment */
+    implementation 'me.paulschwarz:spring-dotenv:4.0.0'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

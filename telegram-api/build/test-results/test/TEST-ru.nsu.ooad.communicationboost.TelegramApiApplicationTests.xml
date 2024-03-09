@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.nsu.ooad.communicationboost.TelegramApiApplicationTests" tests="1" skipped="1" failures="0" errors="0" timestamp="2023-12-19T06:32:43" hostname="MacBook-Pro.local" time="0.0">
+  <properties/>
+  <testcase name="contextLoads()" classname="ru.nsu.ooad.communicationboost.TelegramApiApplicationTests" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

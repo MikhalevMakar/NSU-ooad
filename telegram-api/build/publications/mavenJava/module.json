@@ -1,0 +1,141 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "ru.nsu.ooad.communicationboost",
+    "module": "telegram-starter",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "telegram-starter-1.0.0-plain.jar",
+          "url": "telegram-starter-1.0.0-plain.jar",
+          "size": 23842,
+          "sha512": "9fca4b67be3b5058f1dc4b61661d6742c5c11b466896677e07959ab421eb1e0a2acdc2e19ea0342f703607961b351b7acb6eaf138c277c8e4c5b2352774b738f",
+          "sha256": "fb3d8bb676fe1efaeacece1c3c2d1cbf80b9a7190dc5dac1fc70c7e0717adc1b",
+          "sha1": "c01d35432f7b5088eca267ac6fd6f7f08e87a84a",
+          "md5": "f370ff82192b5507de5f679efd431d20"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-validation",
+          "excludes": [
+            {
+              "group": "jakarta.activation",
+              "module": "jakarta.activation-api"
+            }
+          ]
+        },
+        {
+          "group": "me.paulschwarz",
+          "module": "spring-dotenv",
+          "version": {
+            "requires": "4.0.0"
+          },
+          "excludes": [
+            {
+              "group": "jakarta.activation",
+              "module": "jakarta.activation-api"
+            }
+          ]
+        },
+        {
+          "group": "org.aspectj",
+          "module": "aspectjweaver",
+          "version": {
+            "requires": "1.9.7"
+          },
+          "excludes": [
+            {
+              "group": "jakarta.activation",
+              "module": "jakarta.activation-api"
+            }
+          ]
+        },
+        {
+          "group": "org.telegram",
+          "module": "telegrambots",
+          "version": {
+            "requires": "6.8.0"
+          },
+          "excludes": [
+            {
+              "group": "jakarta.activation",
+              "module": "jakarta.activation-api"
+            }
+          ]
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web",
+          "excludes": [
+            {
+              "group": "jakarta.activation",
+              "module": "jakarta.activation-api"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "telegram-starter-1.0.0-plain.jar",
+          "url": "telegram-starter-1.0.0-plain.jar",
+          "size": 23842,
+          "sha512": "9fca4b67be3b5058f1dc4b61661d6742c5c11b466896677e07959ab421eb1e0a2acdc2e19ea0342f703607961b351b7acb6eaf138c277c8e4c5b2352774b738f",
+          "sha256": "fb3d8bb676fe1efaeacece1c3c2d1cbf80b9a7190dc5dac1fc70c7e0717adc1b",
+          "sha1": "c01d35432f7b5088eca267ac6fd6f7f08e87a84a",
+          "md5": "f370ff82192b5507de5f679efd431d20"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "telegram-starter-1.0.0-all.jar",
+          "url": "telegram-starter-1.0.0-all.jar",
+          "size": 31602376,
+          "sha512": "b572a04c28f09a277bbe18318572e6bfbb1c56e863564cbcd490352d489444bc5c626b7d0af9d80ee2892177840f895c7c569085825743333726ed688bf07472",
+          "sha256": "595b5830fc8db0184f44ab99620a63a4997112e759a5edeb810a11e282b21416",
+          "sha1": "2366884cbdbfa24a94fee98387c06eec31067091",
+          "md5": "de8212f226fdbc12bc200be4458dd093"
+        }
+      ]
+    }
+  ]
+}

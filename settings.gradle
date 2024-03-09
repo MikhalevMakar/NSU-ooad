@@ -1,0 +1,4 @@
+rootProject.name = 'communication-boost'
+include 'telegram-api'
+include 'user'
+include 'scenarios'

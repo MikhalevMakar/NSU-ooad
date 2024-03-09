@@ -1,0 +1,34 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres:13
+    volumes:
+      - ../initdb:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRES_USER=back
+      - POSTGRES_PASSWORD=back
+    ports:
+      - "5433:5432"
+    restart: always
+  redis:
+    image: 'bitnami/redis:latest'
+    environment:
+      - REDIS_USERNAME=back
+      - REDIS_PASSWORD=back
+    command: redis-server --requirepass back
+    ports:
+      - "6379:6379"
+    restart: always
+  catalog-backend:
+    container_name: catalog_backend
+    restart: always
+    build:
+      context: ../../auth-service
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      POSTGRES_HOST: postgresql
+    links:
+      - postgresql
+      - redis

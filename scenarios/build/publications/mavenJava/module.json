@@ -1,0 +1,111 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "ru.nsu.ooad.communicationboost",
+    "module": "scenarios-starter",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "scenarios-starter-1.0.0-plain.jar",
+          "url": "scenarios-starter-1.0.0-plain.jar",
+          "size": 13208,
+          "sha512": "0c9fca0b4027d542511682b9beda2087c62276c55a74d59d9516389b4554d51ae381be8e34050eabe644e7a535dba714d36777f9d67e3ff936dbc652a476a381",
+          "sha256": "4d2ba9ac5004783d6d09ca62e59ab9a3c1d97e07c853665cbe42e8584a65a1ba",
+          "sha1": "044a7c8aaf178fb42257d8c85152e287685f9a89",
+          "md5": "8d0423694af19e8c2dc98b521ec52ead"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter"
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.9.0"
+          }
+        },
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.8.9"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web"
+        },
+        {
+          "group": "ru.nsu.ooad.communicationboost",
+          "module": "telegram-starter",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "scenarios-starter-1.0.0-plain.jar",
+          "url": "scenarios-starter-1.0.0-plain.jar",
+          "size": 13208,
+          "sha512": "0c9fca0b4027d542511682b9beda2087c62276c55a74d59d9516389b4554d51ae381be8e34050eabe644e7a535dba714d36777f9d67e3ff936dbc652a476a381",
+          "sha256": "4d2ba9ac5004783d6d09ca62e59ab9a3c1d97e07c853665cbe42e8584a65a1ba",
+          "sha1": "044a7c8aaf178fb42257d8c85152e287685f9a89",
+          "md5": "8d0423694af19e8c2dc98b521ec52ead"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "scenarios-starter-1.0.0-all.jar",
+          "url": "scenarios-starter-1.0.0-all.jar",
+          "size": 34807201,
+          "sha512": "faef291928d4094037b20581807479f7829c18325dd39de8faaa0c9a355d7ffcbb392bdb50ede26965365a1ca6c11de28ccdd970b41d9e76c8483114e545f63f",
+          "sha256": "6f5992ff1812cf87784b9416a91f23698d311b38df42003e503e35bc70aab310",
+          "sha1": "ab22048f765ba3ea791344fe0b67af1eeb3c1d6b",
+          "md5": "857a18d7e8ec966e4bc9c2cf87e951c0"
+        }
+      ]
+    }
+  ]
+}

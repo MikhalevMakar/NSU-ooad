@@ -1,0 +1,59 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.4'
+	id 'io.spring.dependency-management' version '1.1.3'
+}
+
+group = 'ru.nsu.ooad'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	/* Web */
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+
+//	/* JPA */
+//	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//	implementation 'org.postgresql:postgresql:42.2.27'
+
+	/* Validation */
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	/* Lombok */
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	/* ENVIRONMENT */
+	implementation group: 'me.paulschwarz', name: 'spring-dotenv', version: '4.0.0'
+
+
+	/* MAP STRUCT */
+//	annotationProcessor "org.mapstruct:mapstruct-processor:4.0.0"
+
+	/* ASPECTJ */
+	implementation 'org.aspectj:aspectjweaver:1.9.7'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

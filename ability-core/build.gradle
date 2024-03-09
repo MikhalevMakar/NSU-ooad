@@ -1,0 +1,81 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.4'
+    id 'io.spring.dependency-management' version '1.1.3'
+}
+
+group = 'ru.nsu.ooad.communicationboost'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+compileJava {
+    options.compilerArgs += [
+            "-Amapstruct.defaultComponentModel=spring",
+            "-Amapstruct.unmappedTargetPolicy=IGNORE"
+    ]
+}
+
+dependencies {
+     /* web */
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    /* actuator */
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    /* email */
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+
+	/* jpa */
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    /* redis */
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    /* postgres */
+	implementation 'org.postgresql:postgresql:42.2.27'
+
+    /* validation */
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    /* lombok */
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    /* environment */
+    implementation group: 'me.paulschwarz', name: 'spring-dotenv', version: '4.0.0'
+
+    /* flyway migrations */
+    implementation 'org.flywaydb:flyway-core'
+
+    /* map struct */
+    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+
+    /* aspectj */
+    implementation 'org.aspectj:aspectjweaver:1.9.7'
+
+    implementation 'org.telegram:telegrambots:6.8.0'
+
+    /* scenarios-starter */
+    implementation 'ru.nsu.ooad.communicationboost:scenarios-starter:1.0.0'
+
+    /* email-starter */
+    implementation 'ru.nsu.ooad.communicationboost:email-starter:1.0.0'
+
+    implementation 'ru.nsu.ooad.communicationboost:telegram-starter:1.0.0'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
